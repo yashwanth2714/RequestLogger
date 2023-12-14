@@ -15,6 +15,7 @@ import axiosInstance from '../../utils/axiosInstance';
 // Import Material-UI components
 import Box from '@mui/system/Box';
 import Button from '@mui/material/Button';
+import Tooltip from '@mui/material/Tooltip';
 
 // Import local components
 import CopyToClipboardButton from '../Shared/CopyToClipboardButton';
@@ -33,6 +34,7 @@ const NEW_ENDPOINT_URL = '/newEndpoint';
 function Endpoint() {
     // Destructure values from the RequestContext
     const { tunnelURL, updateTunnelURL, updateRequests } = useContext(RequestContext);
+    const tooltipText = "Creating a new endpoint clears previous requests from the UI. The old endpoint becomes inaccessible, but its requests are logged in the server file (capturedLogs.txt) for reference.";
 
     // State for handling error messages
     const [error, setError] = useState("");
@@ -106,9 +108,11 @@ function Endpoint() {
             </div>
 
             {/* Button to create a new endpoint */}
-            <Button variant="contained" className='newEndpointBtn' onClick={createNewEndpoint}>
-                Create New Endpoint
-            </Button>
+            <Tooltip title={tooltipText} placement="left">
+                <Button variant="contained" className='newEndpointBtn' onClick={createNewEndpoint}>
+                    Create New Endpoint
+                </Button>
+            </Tooltip>
         </Box>
     );
 }
