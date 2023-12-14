@@ -1,0 +1,31 @@
+.endpointSection {
+    border: 1px solid white;
+    width: 70%;
+    height: 200px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 5%
+}
+
+.endpointText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 15px;
+    background-color: white;
+    color: black;
+    width: fit-content;
+    padding: 5px 15px;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+.errorMessage {
+    color: red;
+    font-size: 1.5rem;
+}
+
+.newEndpointBtn {
+    margin-top: 1rem !important;
+    background-color: #27b08a !important;
+}

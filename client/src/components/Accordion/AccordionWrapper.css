@@ -1,0 +1,14 @@
+.accordionWrapperSection {
+    margin-bottom: 2rem !important;
+}
+
+.accordionWrapperHeader {
+    background-color: #eee !important;
+    border-radius: 5px !important;
+}
+
+.accordionWrapperDetails {
+    text-align: left;
+    display: grid;
+    grid-template-columns: 96% 4%;
+}

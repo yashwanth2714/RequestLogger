@@ -1,0 +1,39 @@
+.Mui-selected {
+    color: white !important;
+    background-color: #1d2c3c !important;
+}
+
+.MuiTabs-indicator {
+    background-color: #27b08a !important;
+}
+
+.accordionSection {
+    margin: 0 auto;
+    margin-top: 2%;
+    width: 70%;
+    height: auto;
+    text-align: center;
+    color: black
+}
+
+.tabsAppBar {
+    background-color: white !important;
+    color: #1d2c3c !important;
+}
+
+.codeTab {
+    display: grid;
+    grid-template-columns: 99% 1%;
+    align-items: baseline;
+}
+
+.testTab {
+    display: flex;
+    gap: 2%;
+    margin-top: 1rem;
+}
+
+.sendRequestBtn {
+    color: #27b08a !important;
+    border-color: #27b08a !important;
+}

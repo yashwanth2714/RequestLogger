@@ -1,0 +1,20 @@
+.timeAgo {
+    margin-left: 1rem;
+}
+
+.requestBodyDetailsSection {
+    padding: 1.5rem 3rem;
+    border: 1px solid white;
+    height: auto;
+    text-align: center;
+    margin-top: 2%;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+}
+
+.requestBodyDetailsSectionHeader {
+    display: grid;
+    grid-template-columns: 95% 5%;
+    margin-bottom: 1%;
+}

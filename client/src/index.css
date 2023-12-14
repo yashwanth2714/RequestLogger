@@ -1,0 +1,19 @@
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+body {
+    font-family: "Roboto";
+    background-color: #1d2c3c;
+    color: white;
+}
+
+.MuiButton-contained, .MuiButton-outlined {
+    text-transform: none !important;
+}
