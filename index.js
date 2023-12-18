@@ -33,7 +33,7 @@ app.use("/", routes);
 
 // Start the server, listening on the specified port from the configuration
 app.listen(config.PORT, () => {
-    console.log("Server listening on port: ", config.PORT);
+    console.log("\nServer listening on port: ", config.PORT);
     
     // Call the setupNgrokTunnel function to set up a tunnel using ngrok
     setupNgrokTunnel();

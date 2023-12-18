@@ -18,7 +18,7 @@ async function setupNgrokTunnel() {
         const url = await ngrok.connect({ addr: config.PORT, authtoken: config.AUTH_TOKEN, bind_tls: false });
 
         // Log the public URL of the ngrok tunnel
-        console.log('Ngrok Tunnel URL:', url);
+        console.log('\nNgrok Tunnel URL:', url);
 
         // Update the server's endpoint in the configuration with the ngrok tunnel URL
         config.ENDPOINT = url;
@@ -30,7 +30,7 @@ async function setupNgrokTunnel() {
         });
     } catch (err) {
         // Handle errors during ngrok tunnel setup and log the details
-        console.error('Error creating ngrok tunnel:', err);
+        console.error('\nError creating ngrok tunnel:', err);
 
         // Update the configuration with the error details
         config.ERROR = err;

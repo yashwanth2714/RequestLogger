@@ -7,7 +7,7 @@
         "install-all": "npm i && npm i --prefix client",
         "start": "npm-run-all --parallel start:server start:client",
         "start:server": "node index",
-        "start:client": "npm run start --prefix client"
+        "start:client": "timeout /t 7 /nobreak && npm run start --prefix client"
     },
     "keywords": [],
     "author": "",
