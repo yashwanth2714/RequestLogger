@@ -144,6 +144,14 @@ If you'd like to contribute to RequestLogger, please follow these steps:
 2. Create a new branch for your feature or bug fix.
 3. Make your changes and submit a pull request.
 
+## Known Issue
+
+If you encounter the following error when running ngrok, close the terminal and execute the start command in a new terminal. This is a known [problem](https://github.com/bubenshchykov/ngrok/issues/318) with ngrok that they will investigate to provide a solution.
+
+```bash
+RequestError: connect ECONNREFUSED 127.0.0.1:4040
+```
+
 ## :star: the repo, if you like the project
 
 
