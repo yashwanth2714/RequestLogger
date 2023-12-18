@@ -50,6 +50,8 @@ RequestLogger is a local request logging tool using [Ngrok](https://ngrok.com/).
 
 ## Usage
 
+After the initial setup, you only need to install dependencies once. From the next time, you can simply run the following command in the project directory:
+
 1. Start the server and client:
 
     ```bash
