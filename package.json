@@ -4,7 +4,7 @@
     "description": "A local request logging tool using ngrok. This tool writes request bodies to a file and provides a user interface built with React",
     "main": "index.js",
     "scripts": {
-        "install-all": "npm i && npm i --prefix client",
+        "install-all": "npm i && cd client && npm i",
         "start": "npm-run-all --parallel start:server start:client",
         "start:server": "node index",
         "start:client": "timeout /t 7 /nobreak && npm run start --prefix client"
