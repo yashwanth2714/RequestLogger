@@ -108,11 +108,14 @@ function Endpoint() {
             </div>
 
             {/* Button to create a new endpoint */}
+
+            {/* 
             <Tooltip title={tooltipText} placement="left">
                 <Button variant="contained" className='newEndpointBtn' onClick={createNewEndpoint}>
                     Create New Endpoint
                 </Button>
             </Tooltip>
+            */}
         </Box>
     );
 }
