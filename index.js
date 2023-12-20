@@ -1,5 +1,5 @@
 /*
-    The index.js file is the main entry point for the Express.js server. It sets up an ngrok tunnel using the setupNgrokTunnel
+    The index.js file is the main entry point for the Express.js server. It sets up an ngrok tunnel using the setupLocalTunnel
     function, initializes an Express application, configures CORS headers for cross-origin requests, parses incoming JSON requests,
     defines routes using the routes module, and starts the server to listen on the specified port from the configuration.
 */
@@ -10,8 +10,8 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require('cors');
 
-// Import the setupNgrokTunnel function from the connection module
-const setupNgrokTunnel = require("./ngrok-setup/ngrokSetup");
+// Import the setupLocalTunnel function from the connection module
+const setupLocalTunnel = require("./tunnel-setup/tunnelSetup");
 
 // Create an instance of the Express application
 const app = express();
@@ -21,9 +21,7 @@ const routes = require("./routes/requestRoutes");
 const config = require("./config/config");
 
 // Enable CORS (Cross-Origin Resource Sharing) with custom headers
-app.use(cors({
-    allowedHeaders: ['ngrok-skip-browser-warning', 'Content-Type'],
-}));
+app.use(cors());
 
 // Parse incoming JSON requests
 app.use(bodyParser.json());
@@ -35,6 +33,6 @@ app.use("/", routes);
 app.listen(config.PORT, () => {
     console.log("\nServer listening on port: ", config.PORT);
     
-    // Call the setupNgrokTunnel function to set up a tunnel using ngrok
-    setupNgrokTunnel();
+    // Call the setupLocalTunnel function to set up a tunnel using ngrok
+    setupLocalTunnel();
 });

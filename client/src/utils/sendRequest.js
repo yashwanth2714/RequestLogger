@@ -24,7 +24,8 @@ async function sendPostRequest(apiURL) {
 
         // Define headers for the HTTP request
         const headers = {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            "Bypass-Tunnel-Reminder": true
         };
 
         // Perform the POST request using the fetch API

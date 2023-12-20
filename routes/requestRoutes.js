@@ -11,11 +11,10 @@ const fs = require("fs");
 
 // Import the express and ngrok libraries for creating a server and setting up tunnels
 const express = require("express");
-const ngrok = require('ngrok');
 
 // Import the configuration settings and the ngrok tunnel setup function
 const config = require("../config/config");
-const setupNgrokTunnel = require("../ngrok-setup/ngrokSetup");
+const setupLocalTunnel = require("../tunnel-setup/tunnelSetup");
 
 // Create an instance of the Express Router
 const router = express.Router();
@@ -71,13 +70,7 @@ router.get("/requests", (req, res) => {
 
 // GET endpoint to generate a new ngrok tunnel and reset the list of previous requests
 router.get("/newEndpoint", async (req, res) => {
-    // Retrieve the ngrok API and stop the current tunnel
-    const api = ngrok.getApi();
-    const response = await api.listTunnels();
-    await api.stopTunnel(response?.tunnels?.[0]?.name);
-
-    // Set up a new ngrok tunnel, reset the list of requests, and send the updated ngrok tunnel URL
-    await setupNgrokTunnel();
+    await setupLocalTunnel();
     config.REQUESTS = [];
     res.send({ url: config.ENDPOINT, error: config.ERROR });
 });
