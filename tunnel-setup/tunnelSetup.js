@@ -15,7 +15,7 @@ const config = require("../config/config");
 async function setupLocalTunnel() {
     try {
         // Connect to localtunnel, providing the port, authentication token, and disabling TLS binding
-        const tunnel = await localtunnel({ port: config.PORT, subdomain: `request-logger` });
+        const tunnel = await localtunnel({ port: config.PORT, host: "http://requestlogger.site"});
 
         // Log the public URL of the local tunnel
         console.log('\nLocal Tunnel URL:', tunnel.url, "\n");
